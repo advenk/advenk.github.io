@@ -5,10 +5,10 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  // Conditionally set basePath based on environment
-  basePath: process.env.NODE_ENV === 'production' ? '/42bitstogo.github.io' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? './' : '',
+  // Remove or leave basePath empty for a user/organization GH pages site:
+  basePath: '',
+  assetPrefix: '',
   trailingSlash: true,
-}
+};
 
-export default nextConfig
+export default nextConfig;
