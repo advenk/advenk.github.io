@@ -1,12 +1,14 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+import { NextConfig } from 'next'
+
+const nextConfig: NextConfig = {
   output: 'export',
   images: {
     unoptimized: true,
   },
-  assetPrefix: './',
-  basePath: '',
+  // Conditionally set basePath based on environment
+  basePath: process.env.NODE_ENV === 'production' ? '/42bitstogo.github.io' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? './' : '',
   trailingSlash: true,
 }
 
-module.exports = nextConfig
+export default nextConfig
