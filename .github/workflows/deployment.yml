@@ -29,6 +29,13 @@ jobs:
         run: npm run build
         working-directory: ./portfolio
 
+      - name: Debug output directory
+        run: |
+          echo "Contents of root directory:"
+          ls -la
+          echo "Contents of out directory:"
+          ls -la out/
+
       - name: Add .nojekyll file
         run: |
           touch out/.nojekyll
@@ -38,3 +45,4 @@ jobs:
         with:
           branch: gh-pages
           folder: out
+          clean: true # Automatically remove deleted files from the deploy branch
