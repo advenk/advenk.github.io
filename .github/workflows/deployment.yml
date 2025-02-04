@@ -24,7 +24,7 @@ jobs:
       - name: Install dependencies
         run: |
           npm install -g npm@latest
-          npm install --include=dev
+          npm install
       - name: Debug packages
         run: |
           echo "Listing installed packages:"
@@ -37,7 +37,7 @@ jobs:
           ls -la node_modules/autoprefixer || echo "autoprefixer not found"
 
       - name: Build and Export
-        run: NODE_ENV=production npm run build
+        run: npm run build
 
       - name: Verify build output
         run: |
@@ -53,9 +53,19 @@ jobs:
       - name: Add .nojekyll file
         run: touch out/.nojekyll
 
+      - name: Prepare for deployment
+        run: |
+          # Create clean gh-pages directory
+          rm -rf gh-pages
+          mkdir gh-pages
+          # Copy all files from out directory
+          cp -r out/* gh-pages/
+          # Ensure .nojekyll exists
+          touch gh-pages/.nojekyll
+
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          folder: out
+          folder: gh-pages
           clean: true
