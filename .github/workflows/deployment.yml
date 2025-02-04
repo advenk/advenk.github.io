@@ -24,7 +24,7 @@ jobs:
       - name: Install dependencies
         run: |
           npm install -g npm@latest
-          npm ci
+          npm install
       - name: Debug packages
         run: |
           echo "Listing installed packages:"
