@@ -28,9 +28,13 @@ jobs:
       - name: Debug packages
         run: |
           echo "Listing installed packages:"
-          npm list tailwindcss
-          npm list postcss
-          npm list autoprefixer
+          npm list || true
+          echo "\nChecking node_modules directory:"
+          ls -la node_modules/
+          echo "\nChecking for specific packages:"
+          ls -la node_modules/tailwindcss || echo "tailwindcss not found"
+          ls -la node_modules/postcss || echo "postcss not found"
+          ls -la node_modules/autoprefixer || echo "autoprefixer not found"
 
       - name: Build and Export
         run: npm run build
