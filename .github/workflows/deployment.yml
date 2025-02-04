@@ -27,20 +27,23 @@ jobs:
       - name: Build and Export
         run: npm run build
 
-      - name: Debug output directory
+      - name: Verify build output
         run: |
-          echo "Contents of root directory:"
-          ls -la
-          echo "Contents of out directory:"
-          ls -la out/
+          if [ ! -d "out" ]; then
+            echo "Build failed: 'out' directory is missing"
+            exit 1
+          fi
+          if [ ! -f "out/index.html" ]; then
+            echo "Build failed: 'out/index.html' is missing"
+            exit 1
+          fi
 
       - name: Add .nojekyll file
-        run: |
-          touch out/.nojekyll
+        run: touch out/.nojekyll
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
           folder: out
-          clean: true # Automatically remove deleted files from the deploy branch
+          clean: true
