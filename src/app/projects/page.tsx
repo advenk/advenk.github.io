@@ -2,6 +2,7 @@ import Navigation from '../../components/Navigation'
 
 export default function ProjectsPage() {
   const projects = [
+    // TODO: add year?
     {
       title: "OpenDC Cost Awareness",
       description: "Integrated cost awareness in OpenDC simulatiovn framework with cost based scheduling strategies for resource allocation.",
