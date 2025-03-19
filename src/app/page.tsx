@@ -1,5 +1,11 @@
-import Portfolio from '../components/Portfolio/index'
+import Navigation from '../components/Navigation'
+import Home from '../components/Home'
 
-export default function Home() {
-  return <Portfolio />
+export default function Page() {
+  return (
+    <>
+      <Navigation />
+      <Home />
+    </>
+  )
 }

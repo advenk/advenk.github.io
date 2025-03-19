@@ -3,8 +3,12 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #000000;
+  --foreground: #ffffff;
+  --neon-primary: #00ff9d;
+  --neon-secondary: #ff00ff;
+  --text-primary: #ededed;
+  --text-secondary: #a0a0a0;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -15,7 +19,33 @@
 }
 
 body {
-  color: var(--foreground);
+  color: var(--text-primary);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', sans-serif;
+}
+
+.neon-text {
+  color: var(--neon-primary);
+  text-shadow: 0 0 5px var(--neon-primary);
+}
+
+.neon-border {
+  border-color: var(--neon-primary);
+  box-shadow: 0 0 5px var(--neon-primary);
+}
+
+.hover-neon:hover {
+  color: var(--neon-primary);
+  text-shadow: 0 0 5px var(--neon-primary);
+  transition: all 0.3s ease;
+}
+
+.nav-link {
+  color: var(--text-secondary);
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--neon-primary);
+  text-shadow: 0 0 5px var(--neon-primary);
 }
