@@ -22,7 +22,8 @@ jobs:
           node-version: '20'
 
       - name: Install dependencies
-        run: npm install
+        run: npm install --verbose > install.log 2>&1
+        cat install.log
 
       - name: Debug packages
         run: |
