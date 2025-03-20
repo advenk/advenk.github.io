@@ -22,9 +22,8 @@ jobs:
           node-version: '20'
 
       - name: Install dependencies
-        run: |
-          npm install -g npm@latest
-          npm install
+        run: npm install
+
       - name: Debug packages
         run: |
           echo "Listing installed packages:"
@@ -58,12 +57,9 @@ jobs:
 
       - name: Prepare for deployment
         run: |
-          # Create clean gh-pages directory
           rm -rf gh-pages
           mkdir gh-pages
-          # Copy all files from out directory
           cp -r out/* gh-pages/
-          # Ensure .nojekyll exists
           touch gh-pages/.nojekyll
 
       - name: Deploy to GitHub Pages
