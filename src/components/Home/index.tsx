@@ -13,7 +13,7 @@ const Home = () => {
           <div className="space-y-6 text-xl text-[var(--text-secondary)]">
             <p className="leading-relaxed">
               Software engineer with experience in building distributed microservices 
-              using SpringBoot, Kafka, Elasticsearch, PostgreSQL, Redis, and more.
+              using SpringBoot, Kafka, Elasticsearch, MySQL, Redis, and more.
             </p>
             
             <p className="leading-relaxed">
