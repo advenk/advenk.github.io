@@ -25,7 +25,8 @@ jobs:
         run: |
           npm install --verbose > install.log 2>&1
           cat install.log
-
+      - name: Install Tailwind CSS and dependencies
+        run: npm install tailwindcss postcss autoprefixer
       - name: Debug packages
         run: |
           echo "Listing installed packages:"
