@@ -5,7 +5,7 @@ const nextConfig = {
     unoptimized: true,
   },
   basePath: '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? './' : undefined,
+  assetPrefix: process.env.NODE_ENV === 'production' ? '' : undefined,
   trailingSlash: true,
 };
 

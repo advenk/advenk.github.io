@@ -5,7 +5,7 @@ export default function ProjectsPage() {
     // TODO: add year?
     {
       title: "OpenDC Cost Awareness",
-      description: "Integrated cost awareness in OpenDC simulatiovn framework with cost based scheduling strategies for resource allocation.",
+      description: "Integrated cost awareness in OpenDC simulation framework with cost based scheduling strategies for resource allocation.",
       technologies: ["Kotlin", "Java"],
       codeLink: "https://github.com/advenk/opendc/tree/cost-sch-final",
       paperLink: null
