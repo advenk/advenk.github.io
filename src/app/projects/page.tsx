@@ -38,29 +38,31 @@ export default function ProjectsPage() {
     }
   ];
 
-  const professionalProjects = [
-    {
-      title: "Co-lending Platform",
-      description: "Designed and developed a SaaS-based co-lending platform connecting our customer-facing application with external lenders. This involved the creation and orchestration of multiple REST microservices to ensure a reliable and scalable product.",
-      technologies: ["Java", "Spring Boot", "Kafka", "Redis", "MySQL", "Docker"],
-      codeLink: null,
-      paperLink: null
-    },
-    {
-      title: "Custom Loan Collection Automation and Settlement Platform",
-      description: "Developed a customizable SaaS platform for loan collection automation, integrating with multiple payment providers. This system automated payment processing, report ingestion, and reconciliation, reducing operational workload significantly.",
-      technologies: ["Java", "Spring Boot", "Python", "MySQL", "Redis"],
-      codeLink: null,
-      paperLink: null
-    },
-    {
-      title: "Report Ingestion Framework",
-      description: "Implemented a Python-based framework for ingesting large-scale operational reports for the accounts team, providing valuable insights into loan performance.",
-      technologies: ["Python", "MySQL", "Pandas"],
-      codeLink: null,
-      paperLink: null
-    }
-  ];
+  const professionalProjects = {
+    "Lendingkart": [
+      {
+        title: "Co-lending Platform",
+        description: "Designed and developed a SaaS-based co-lending platform connecting our customer-facing application with external lenders. This involved the creation and orchestration of multiple REST microservices to ensure a reliable and scalable product.",
+        technologies: ["Java", "Spring Boot", "Kafka", "Redis", "MySQL", "Docker", "Kubernetes"],
+        codeLink: null,
+        paperLink: null
+      },
+      {
+        title: "Custom Loan Collection Automation and Settlement Platform",
+        description: "Developed a customizable SaaS platform for loan collection automation, integrating with multiple payment providers. This system automated payment processing, report ingestion, and reconciliation, reducing operational workload significantly.",
+        technologies: ["Java", "Spring Boot", "MySQL", "Redis", "Schedulers"],
+        codeLink: null,
+        paperLink: null
+      },
+      {
+        title: "Report Ingestion Framework",
+        description: "Implemented a Python-based framework for ingesting large-scale operational reports for the accounts team, providing valuable insights into loan performance.",
+        technologies: ["Python", "MySQL", "Pandas"],
+        codeLink: null,
+        paperLink: null
+      }
+    ]
+  };
 
   return (
     <>
@@ -153,29 +155,34 @@ export default function ProjectsPage() {
               </div>
             ) : (
               <div>
-                <div className="space-y-8">
-                  {professionalProjects.map((project, index) => (
-                    <div
-                      key={index}
-                      className="block p-6 border border-[var(--text-secondary)] rounded-lg hover:neon-border transition-all"
-                    >
-                      <h2 className="text-2xl mb-2">{project.title}</h2>
-                      <p className="text-[var(--text-secondary)] mb-4">{project.description}</p>
-                      <div className="flex items-center justify-between">
-                        <div className="flex flex-wrap gap-2">
-                          {project.technologies.map((tech, idx) => (
-                            <span
-                              key={idx}
-                              className="px-3 py-1 text-sm border border-[var(--text-secondary)] rounded-full"
-                            >
-                              {tech}
-                            </span>
-                          ))}
+                {Object.entries(professionalProjects).map(([company, projects]) => (
+                  <div key={company} className="mb-12">
+                    <h2 className="text-3xl font-light mb-6 text-[var(--text-primary)]">{company}</h2>
+                    <div className="space-y-8">
+                      {projects.map((project, index) => (
+                        <div
+                          key={index}
+                          className="block p-6 border border-[var(--text-secondary)] rounded-lg hover:neon-border transition-all"
+                        >
+                          <h2 className="text-2xl mb-2">{project.title}</h2>
+                          <p className="text-[var(--text-secondary)] mb-4">{project.description}</p>
+                          <div className="flex items-center justify-between">
+                            <div className="flex flex-wrap gap-2">
+                              {project.technologies.map((tech, idx) => (
+                                <span
+                                  key={idx}
+                                  className="px-3 py-1 text-sm border border-[var(--text-secondary)] rounded-full"
+                                >
+                                  {tech}
+                                </span>
+                              ))}
+                            </div>
+                          </div>
                         </div>
-                      </div>
+                      ))}
                     </div>
-                  ))}
-                </div>
+                  </div>
+                ))}
               </div>
             )}
           </div>
