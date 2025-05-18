@@ -26,28 +26,28 @@ export default function FormulaPage() {
                   <td className="px-6 py-4 whitespace-nowrap border-r border-[var(--text-secondary)]">Compare sample mean to known value</td>
                   <td className="px-6 py-4 whitespace-nowrap border-r border-[var(--text-secondary)]">Continuous</td>
                   <td className="px-6 py-4 whitespace-nowrap border-r border-[var(--text-secondary)]">Normal</td>
-                  <td className="px-6 py-4 whitespace-nowrap">Analyze > Compare Means > One-Sample T Test</td>
+                  <td className="px-6 py-4 whitespace-nowrap">Analyze &gt; Compare Means &gt; One-Sample T Test</td>
                 </tr>
                 <tr>
                   <td className="px-6 py-4 whitespace-nowrap border-r border-[var(--text-secondary)]">Independent t-test</td>
                   <td className="px-6 py-4 whitespace-nowrap border-r border-[var(--text-secondary)]">Compare two group means</td>
                   <td className="px-6 py-4 whitespace-nowrap border-r border-[var(--text-secondary)]">Continuous DV, Categorical IV (2 groups)</td>
                   <td className="px-6 py-4 whitespace-nowrap border-r border-[var(--text-secondary)]">Normal</td>
-                  <td className="px-6 py-4 whitespace-nowrap">Analyze > Compare Means > Independent-Samples T Test</td>
+                  <td className="px-6 py-4 whitespace-nowrap">Analyze &gt; Compare Means &gt; Independent-Samples T Test</td>
                 </tr>
                 <tr>
                   <td className="px-6 py-4 whitespace-nowrap border-r border-[var(--text-secondary)]">Paired t-test</td>
                   <td className="px-6 py-4 whitespace-nowrap border-r border-[var(--text-secondary)]">Compare means of related groups</td>
                   <td className="px-6 py-4 whitespace-nowrap border-r border-[var(--text-secondary)]">Continuous</td>
                   <td className="px-6 py-4 whitespace-nowrap border-r border-[var(--text-secondary)]">Normal</td>
-                  <td className="px-6 py-4 whitespace-nowrap">Analyze > Compare Means > Paired-Samples T Test</td>
+                  <td className="px-6 py-4 whitespace-nowrap">Analyze &gt; Compare Means &gt; Paired-Samples T Test</td>
                 </tr>
                 <tr>
                   <td className="px-6 py-4 whitespace-nowrap border-r border-[var(--text-secondary)]">ANOVA</td>
                   <td className="px-6 py-4 whitespace-nowrap border-r border-[var(--text-secondary)]">Compare more than two group means</td>
                   <td className="px-6 py-4 whitespace-nowrap border-r border-[var(--text-secondary)]">Continuous DV, Categorical IV (3+ groups)</td>
                   <td className="px-6 py-4 whitespace-nowrap border-r border-[var(--text-secondary)]">Normal</td>
-                  <td className="px-6 py-4 whitespace-nowrap">Analyze > Compare Means > One-Way ANOVA</td>
+                  <td className="px-6 py-4 whitespace-nowrap">Analyze &gt; Compare Means &gt; One-Way ANOVA</td>
                 </tr>
               </tbody>
             </table>
@@ -78,14 +78,14 @@ export default function FormulaPage() {
                   <td className="px-6 py-4 whitespace-nowrap border-r border-[var(--text-secondary)]">Compare two independent groups</td>
                   <td className="px-6 py-4 whitespace-nowrap border-r border-[var(--text-secondary)]">Ordinal or non-normal Continuous</td>
                   <td className="px-6 py-4 whitespace-nowrap border-r border-[var(--text-secondary)]">Non-normal</td>
-                  <td className="px-6 py-4 whitespace-nowrap">Analyze > Nonparametric Tests > Legacy Dialogs > 2 Independent Samples</td>
+                  <td className="px-6 py-4 whitespace-nowrap">Analyze &gt; Nonparametric Tests &gt; Legacy Dialogs &gt; 2 Independent Samples</td>
                 </tr>
                 <tr>
                   <td className="px-6 py-4 whitespace-nowrap border-r border-[var(--text-secondary)]">Wilcoxon Signed-Rank</td>
                   <td className="px-6 py-4 whitespace-nowrap border-r border-[var(--text-secondary)]">Compare two related groups</td>
                   <td className="px-6 py-4 whitespace-nowrap border-r border-[var(--text-secondary)]">Ordinal or non-normal Continuous</td>
                   <td className="px-6 py-4 whitespace-nowrap border-r border-[var(--text-secondary)]">Non-normal</td>
-                  <td className="px-6 py-4 whitespace-nowrap">Analyze > Nonparametric Tests > Legacy Dialogs > 2 Related Samples</td>
+                  <td className="px-6 py-4 whitespace-nowrap">Analyze &gt; Nonparametric Tests &gt; Legacy Dialogs &gt; 2 Related Samples</td>
                 </tr>
               </tbody>
             </table>
@@ -109,14 +109,14 @@ export default function FormulaPage() {
                   <td className="px-6 py-4 whitespace-nowrap border-r border-[var(--text-secondary)]">Association between categorical variables</td>
                   <td className="px-6 py-4 whitespace-nowrap border-r border-[var(--text-secondary)]">Categorical</td>
                   <td className="px-6 py-4 whitespace-nowrap border-r border-[var(--text-secondary)]">N/A</td>
-                  <td className="px-6 py-4 whitespace-nowrap">Analyze > Descriptive Statistics > Crosstabs</td>
+                  <td className="px-6 py-4 whitespace-nowrap">Analyze &gt; Descriptive Statistics &gt; Crosstabs</td>
                 </tr>
                 <tr>
                   <td className="px-6 py-4 whitespace-nowrap border-r border-[var(--text-secondary)]">Pearson Chi sq</td>
                   <td className="px-6 py-4 whitespace-nowrap border-r border-[var(--text-secondary)]">Compare two independent groups</td>
                   <td className="px-6 py-4 whitespace-nowrap border-r border-[var(--text-secondary)]">categorical</td>
-                  <td className="px-6 py-4 whitespace-nowrap border-r border-[var(--text-secondary)]"></td>
-                  <td className="px-6 py-4 whitespace-nowrap"></td>
+                  <td className="px-6 py-4 whitespace-nowrap border-r border-[var(--text-secondary)]">N/A</td>
+                  <td className="px-6 py-4 whitespace-nowrap">Analyze &gt; Descriptive Statistics &gt; Crosstabs &gt; Exact</td>
                 </tr>
                 <tr>
                   <td className="px-6 py-4 whitespace-nowrap border-r border-[var(--text-secondary)]">Mcnemar</td>
@@ -130,7 +130,7 @@ export default function FormulaPage() {
                   <td className="px-6 py-4 whitespace-nowrap border-r border-[var(--text-secondary)]">Chi-square alternative for small samples</td>
                   <td className="px-6 py-4 whitespace-nowrap border-r border-[var(--text-secondary)]">Categorical</td>
                   <td className="px-6 py-4 whitespace-nowrap border-r border-[var(--text-secondary)]">N/A</td>
-                  <td className="px-6 py-4 whitespace-nowrap">Analyze > Descriptive Statistics > Crosstabs > Exact</td>
+                  <td className="px-6 py-4 whitespace-nowrap">Analyze &gt; Descriptive Statistics &gt; Crosstabs &gt; Exact</td>
                 </tr>
               </tbody>
             </table>
@@ -154,21 +154,21 @@ export default function FormulaPage() {
                   <td className="px-6 py-4 whitespace-nowrap border-r border-[var(--text-secondary)]">Predict continuous DV from 1 IV</td>
                   <td className="px-6 py-4 whitespace-nowrap border-r border-[var(--text-secondary)]">Continuous DV, Continuous IV</td>
                   <td className="px-6 py-4 whitespace-nowrap border-r border-[var(--text-secondary)]">Normal residuals</td>
-                  <td className="px-6 py-4 whitespace-nowrap">Analyze > Regression > Linear</td>
+                  <td className="px-6 py-4 whitespace-nowrap">Analyze &gt; Regression &gt; Linear</td>
                 </tr>
                 <tr>
                   <td className="px-6 py-4 whitespace-nowrap border-r border-[var(--text-secondary)]">Multiple Linear Regression</td>
                   <td className="px-6 py-4 whitespace-nowrap border-r border-[var(--text-secondary)]">Predict DV from multiple IVs</td>
                   <td className="px-6 py-4 whitespace-nowrap border-r border-[var(--text-secondary)]">Continuous DV, Multiple IVs</td>
                   <td className="px-6 py-4 whitespace-nowrap border-r border-[var(--text-secondary)]">Normal residuals</td>
-                  <td className="px-6 py-4 whitespace-nowrap">Analyze > Regression > Linear</td>
+                  <td className="px-6 py-4 whitespace-nowrap">Analyze &gt; Regression &gt; Linear</td>
                 </tr>
                 <tr>
                   <td className="px-6 py-4 whitespace-nowrap border-r border-[var(--text-secondary)]">Logistic Regression</td>
                   <td className="px-6 py-4 whitespace-nowrap border-r border-[var(--text-secondary)]">Predict categorical DV</td>
                   <td className="px-6 py-4 whitespace-nowrap border-r border-[var(--text-secondary)]">Categorical DV, any IVs</td>
                   <td className="px-6 py-4 whitespace-nowrap border-r border-[var(--text-secondary)]">N/A</td>
-                  <td className="px-6 py-4 whitespace-nowrap">Analyze > Regression > Binary Logistic</td>
+                  <td className="px-6 py-4 whitespace-nowrap">Analyze &gt; Regression &gt; Binary Logistic</td>
                 </tr>
               </tbody>
             </table>
