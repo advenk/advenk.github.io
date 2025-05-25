@@ -11,7 +11,7 @@ const Home = () => {
             {/* Profile Image */}
             <div className="w-64 h-64 relative rounded-full overflow-hidden border-4 border-[var(--neon-primary)] shadow-lg shadow-[var(--neon-primary)]/20">
               <Image
-                src="/AV.jpeg"
+                src="/AV2.jpeg"
                 alt="Aditya Venkatesh"
                 fill
                 style={{ objectFit: 'cover', objectPosition: 'top center' }}
