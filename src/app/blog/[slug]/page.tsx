@@ -1,4 +1,3 @@
-import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from 'next';
 import Header from '../../../components/Header';
 import Footer from '../../../components/Footer';
 import { getAllPostIds, getPostData, PostData } from '../../../lib/posts';
