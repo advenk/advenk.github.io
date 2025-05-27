@@ -9,10 +9,20 @@ import Image from 'next/image';
 const AVATAR_URL = '/AV2.jpeg';
 
 interface BlogPostPageProps {
-  postData: PostData;
+  params: {
+    slug: string;
+  };
 }
 
-export default function BlogPostPage({ postData }: BlogPostPageProps) {
+export async function generateStaticParams() {
+  const paths = getAllPostIds();
+  return paths.map((path) => ({
+    slug: path.params.slug,
+  }));
+}
+
+export default async function BlogPostPage({ params }: BlogPostPageProps) {
+  const postData = await getPostData(params.slug);
   // Placeholder comments - replace with actual comment data and component
   const comments = [
     {
@@ -37,7 +47,7 @@ export default function BlogPostPage({ postData }: BlogPostPageProps) {
 
   return (
     <div className="relative flex size-full min-h-screen flex-col bg-dark-bg-alt group/design-root overflow-x-hidden">
-      <Header pageTitle="TechBlog" logoIcon={<BlogLogoIcon />} showSearchIcon={true} avatarUrl={AVATAR_URL} />
+      <Header pageTitle="TechBlog" logoIcon={<BlogLogoIcon />} showSearchIcon={false} avatarUrl={AVATAR_URL} />
       <main className="flex-grow flex justify-center py-5 px-4 sm:px-10 md:px-40 pt-20">
         <div className="layout-content-container flex flex-col max-w-[960px] flex-1">
           {/* Breadcrumbs */}
@@ -91,23 +101,4 @@ export default function BlogPostPage({ postData }: BlogPostPageProps) {
   );
 }
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = getAllPostIds();
-  return {
-    paths,
-    fallback: false,
-  };
-};
-
-export const getStaticProps: GetStaticProps = async (context: GetStaticPropsContext) => {
-  const params = context.params as { slug: string } | undefined;
-  if (!params?.slug) {
-    return { notFound: true };
-  }
-  const postData = await getPostData(params.slug);
-  return {
-    props: {
-      postData,
-    },
-  };
-}; 
+// Removed getStaticPaths and getStaticProps as they are not used in App Router 

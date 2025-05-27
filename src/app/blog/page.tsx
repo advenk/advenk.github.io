@@ -16,7 +16,7 @@ export default function BlogPage() {
 
   return (
     <div className="relative flex size-full min-h-screen flex-col bg-dark-bg group/design-root overflow-x-hidden">
-      <Header pageTitle="TechBlog" logoIcon={<BlogLogoIcon />} showSearchIcon={true} avatarUrl={AVATAR_URL}/>
+      <Header pageTitle="TechBlog" logoIcon={<BlogLogoIcon />} showSearchIcon={false} avatarUrl={AVATAR_URL}/>
       <main className="flex-grow flex justify-center py-5 px-4 sm:px-10 md:px-40 pt-20">
         <div className="layout-content-container flex flex-col max-w-[960px] flex-1">
           <div className="flex flex-wrap justify-between gap-3 p-4">
