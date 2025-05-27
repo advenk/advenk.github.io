@@ -1,7 +1,7 @@
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-// import BlogPostCard from '../../components/BlogPostCard'; // No posts to display yet
-// import { getSortedPostsData, PostData } from '../../lib/posts'; // No posts to display yet
+import BlogPostCard from '../../components/BlogPostCard';
+import { getSortedPostsData, PostData } from '../../lib/posts';
 import { BlogLogoIcon, MagnifyingGlassIcon, CaretLeftIcon, CaretRightIcon } from '../../components/Icons';
 
 const AVATAR_URL = '/AV2.jpeg';
@@ -9,10 +9,10 @@ const AVATAR_URL = '/AV2.jpeg';
 const categories = ['All']; // Only "All" category for now
 
 export default function BlogPage() {
-  // const allPostsData = getSortedPostsData(); // No posts yet
-  const displayedPosts: any[] = []; // Empty array for posts
+  const allPostsData = getSortedPostsData();
+  const displayedPosts = allPostsData; // Show all posts for now
   const currentPage = 1; // Default to 1
-  const totalPages = 1; // Default to 1 as there are no posts
+  const totalPages = 1; // Default to 1 as pagination is not implemented yet
 
   return (
     <div className="relative flex size-full min-h-screen flex-col bg-dark-bg group/design-root overflow-x-hidden">
@@ -55,17 +55,18 @@ export default function BlogPage() {
             ))}
           </div>
 
-          {/* Blog Post Cards Placeholder - Will be empty */}
-          {displayedPosts.length === 0 && (
+          {/* Blog Post Cards */}
+          {displayedPosts.length === 0 ? (
             <div className="p-4 text-center text-secondary-text">
               <p>No blog posts yet. Stay tuned!</p>
             </div>
+          ) : (
+            <div className="@container">
+              {displayedPosts.map((post) => (
+                <BlogPostCard key={post.id} post={post} />
+              ))}
+            </div>
           )}
-          {/* <div className="@container">
-            {displayedPosts.map((post) => (
-              <BlogPostCard key={post.id} post={post} />
-            ))}
-          </div> */}
 
           {/* Pagination - Hidden if only one page */}
           {totalPages > 1 && (
