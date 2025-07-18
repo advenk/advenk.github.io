@@ -34,11 +34,13 @@ function HomePageContent() {
           </div>
         </div>
         <div className="flex px-4 py-3 justify-start">
-          <button
+          <a
+            href="/Aditya_Resume.pdf"
+            download
             className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-button-light-bg text-button-light-text text-sm font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-opacity"
           >
             <span className="truncate">Download Resume</span>
-          </button>
+          </a>
         </div>
         <div className="@container mt-4">
           <div className="gap-2 px-4 flex flex-wrap justify-start">

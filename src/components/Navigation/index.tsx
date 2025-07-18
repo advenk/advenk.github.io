@@ -16,9 +16,9 @@ const Navigation = () => {
             <Link href="/projects" className="nav-link">
               Projects
             </Link>
-            <Link href="/blog" className="nav-link">
+            <a href="https://advenk.github.io/av-blog" target="_blank" rel="noopener noreferrer" className="nav-link">
               Blog
-            </Link>
+            </a>
             <a
               href="/Aditya_Resume.pdf"
               download

@@ -6,6 +6,13 @@ const AVATAR_URL = '/AV2.jpeg';
 
 const projects = [
   {
+    title: "factguard-ai - AI-Driven Question Answering with Fact Validation",
+    description: "A comprehensive question-answering and fact-checking system utilizing Llama 2 and transformer models. Integrated spaCy for NER and SPARQL for DBpedia/Wikidata querying for fact validation.",
+    imageUrl: '/project_photos/qa-system.png', 
+    projectUrl: "https://github.com/advenk/factguard-ai",
+    paperLink: null
+  },
+  {
     title: "search2stay - Ranking and Recommending hotels",
     description: "Implemented a ranking and recommendation system for hotels using LightGBM trained on real-world expedia dataset as available on the kaggle platform. Technologies: Python, Machine Learning, Data Mining",
     imageUrl: '/project_photos/search2stay.jpeg', 

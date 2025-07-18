@@ -37,9 +37,9 @@ export default function Header({ pageTitle, avatarUrl, showSearchIcon, logoIcon 
           <Link href="/" className="text-primary-text text-sm font-medium leading-normal hover:text-secondary-text transition-colors">
             About
           </Link>
-          <Link href="/blog" className="text-primary-text text-sm font-medium leading-normal hover:text-secondary-text transition-colors">
+          <a href="https://advenk.github.io/av-blog" target="_blank" rel="noopener noreferrer" className="text-primary-text text-sm font-medium leading-normal hover:text-secondary-text transition-colors">
             Blog
-          </Link>
+          </a>
           <Link href="/projects" className="text-primary-text text-sm font-medium leading-normal hover:text-secondary-text transition-colors">
             Projects
           </Link>
