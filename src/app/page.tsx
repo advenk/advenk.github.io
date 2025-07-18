@@ -15,7 +15,7 @@ function HomePageContent() {
               <div className="relative w-40 h-40 shrink-0"> {/* Increased size to w-40 h-40 (160px), added shrink-0 */}
                 <Image
                   src={AVATAR_URL} 
-                  alt="Aditya - Software Engineer" // Ensuring alt text is updated
+                  alt="Aditya - Software Engineer"
                   layout="fill"
                   objectFit="contain"
                   className="rounded-full"
@@ -24,10 +24,12 @@ function HomePageContent() {
               <div className="flex flex-col justify-center text-center @[520px]:text-left"> {/* Centered text for column layout */}
                 <h1 className="text-primary-text text-[22px] font-bold leading-tight tracking-[-0.015em]">Software Engineer</h1>
                 <p className="text-secondary-text-alt text-base font-normal leading-normal mt-1">
-                  Hello! I'm Aditya, a software engineer with a passion for building innovative solutions. 
-                  Currently pursuing a Master's degree in Computer Science, I am a passionate software engineer with a strong foundation in programming and a keen interest in
-                  developing innovative solutions. My background includes experience in various programming languages and frameworks, and I am eager to apply my skills to challenging
-                  projects.
+                  Hello! I'm Aditya, a Computer Science student with a passion for working on complex problems - be it related to optimisation, system design, 
+                  architecture, infra or machine learning. I have dabbled in deep research related to social network analytics with a publication in the springer 
+                  journal and have extensive experience of building end-to-end large scale web applications. 
+                  Currently pursuing a Master's degree in Computer Science, I am exploring and working on the intersection of systems and AI.
+                  I am not shy of being an amateur and love learning and implementing new things from scratch. 
+                  Currently spending my time researching and pushing state-of-the-art for open information extraction from multilingual text. 
                 </p>
               </div>
             </div>
