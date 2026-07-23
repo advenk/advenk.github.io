@@ -1,0 +1,338 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Aditya Marada</title>
+  <meta name="author" content="Aditya Marada">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+</head>
+
+<body>
+  <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+    <tbody>
+      <tr style="padding:0px">
+        <td style="padding:0px">
+
+          <!-- ================================================================
+               HEADER
+               ================================================================ -->
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
+              <tr style="padding:0px">
+                <td style="padding:2.5%;width:63%;vertical-align:middle">
+                  <p class="name" style="text-align:center">Aditya Marada</p>
+                  <p>
+                    I am an MSc Computer Science student at the
+                    <a href="https://www.uva.nl/en">University of Amsterdam</a>,
+                    where my thesis work focuses on large-scale learning-to-rank systems
+                    at <a href="https://www.qogita.com">Qogita</a>.
+                    I have research experience spanning large language models,
+                    representation learning, information retrieval, multi-agent systems,
+                    and multilingual knowledge graphs.
+                  </p>
+                  <p>
+                    Previously, I was as a senior software engineer at
+                    <a href="https://www.lendingkart.com">Lendingkart</a> in Bangalore,
+                    designing distributed backend systems at scale across a platform
+                    with 150+ microservices.
+                    In 2025 I was a
+                    <a href="https://summerofcode.withgoogle.com/">Google Summer of Code</a>
+                    contributor at the <a href="https://www.dbpedia.org/">DBpedia Association</a>,
+                    building multilingual knowledge-extraction pipelines for Hindi Wikipedia.
+                  </p>
+                  <p style="text-align:center">
+                    <a href="mailto:adityavenky97@gmail.com">Email</a> &nbsp;/&nbsp;
+                    <a href="https://github.com/advenk">GitHub</a> &nbsp;/&nbsp;
+                    <a href="https://www.linkedin.com/in/aditya-venkatesh-911b49169/">LinkedIn</a> &nbsp;/&nbsp;
+                    <a href="cv.pdf">CV</a>
+                  </p>
+                </td>
+                <td style="padding:2.5%;width:37%;max-width:37%">
+                  <!-- Replace images/profile.jpg with your actual photo -->
+                  <a href="images/profile.jpg">
+                    <img style="width:100%;max-width:100%;object-fit:cover;border-radius:50%;" alt="profile photo" src="images/profile.jpg">
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- ================================================================
+               RESEARCH
+               ================================================================ -->
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
+              <tr>
+                <td style="padding:20px;width:100%;vertical-align:middle">
+                  <h2>Research</h2>
+                  <p>
+                    My research interests include large language models,
+                    world models, learning-to-rank,and representation learning.
+                    I am particularly fascinated by problems at the intersection of scalable systems
+                    and principled machine learning.
+                  </p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
+
+              <!-- Smart Rankings — HIGHLIGHTED -->
+              <tr onmouseout="rankings_stop()" onmouseover="rankings_start()" bgcolor="#ffffd0">
+                <td style="padding:20px;width:25%;vertical-align:middle">
+                  <div class="one">
+                    <div class="two" id="rankings_image">
+                      <img src="images/smart-rankings-results.jpg" width="160" height="160" style="object-fit:cover;">
+                    </div>
+                    <img src="images/smart-rankings.jpg" width="160" height="160" style="object-fit:cover;">
+                  </div>
+                  <script type="text/javascript">
+                    function rankings_start() { document.getElementById('rankings_image').style.opacity = "1"; }
+                    function rankings_stop()  { document.getElementById('rankings_image').style.opacity = "0"; }
+                    rankings_stop();
+                  </script>
+                </td>
+                <td style="padding:20px;width:75%;vertical-align:middle">
+                  <span class="papertitle">Smart Rankings: Learning-to-Rank at Scale</span>
+                  <br>
+                  <strong>Aditya Marada</strong>
+                  <br>
+                  <em>Master's Thesis, University of Amsterdam &amp; Qogita</em> &nbsp;&mdash;&nbsp; Expected Jul. 2026
+                  <br><a href="papers/smart-rankings.pdf" target="_blank">report</a>
+                  <p>
+                    End-to-end LambdaMART pipeline over 52M+ product impressions, 163k buyers,
+                    and 450k products. Engineered 72 point-in-time ranking features spanning
+                    behavioural history, semantic embeddings, and session context.
+                    Improved production NDCG@10 by <strong>9.55 percentage points</strong>.
+                  </p>
+                </td>
+              </tr>
+
+              <!-- Multi-Agent LLM -->
+              <tr onmouseout="multiagent_stop()" onmouseover="multiagent_start()">
+                <td style="padding:20px;width:25%;vertical-align:middle">
+                  <div class="one">
+                    <div class="two" id="multiagent_image">
+                      <img src="images/multiagent-results.jpg" width="160" height="160" style="object-fit:cover;">
+                    </div>
+                    <img src="images/multiagent.jpg" width="160" height="160" style="object-fit:cover;">
+                  </div>
+                  <script type="text/javascript">
+                    function multiagent_start() { document.getElementById('multiagent_image').style.opacity = "1"; }
+                    function multiagent_stop()  { document.getElementById('multiagent_image').style.opacity = "0"; }
+                    multiagent_stop();
+                  </script>
+                </td>
+                <td style="padding:20px;width:75%;vertical-align:middle">
+                  <span class="papertitle">Coordination Without Commitment: Multi-Agent LLM Coordination</span>
+                  <br>
+                  <strong>Aditya Marada</strong>
+                  <br>
+                  <em>Research Project, University of Amsterdam</em> &nbsp;&mdash;&nbsp; May 2026
+                  <br><a href="papers/multiagent-coordination.pdf" target="_blank">report</a>
+                  <p>
+                    Investigated coordination failures of decentralised LLM agents on distributed
+                    computing tasks (consensus, graph colouring, leader election).
+                    Designed the <strong>Neighbour Belief Protocol (NBP)</strong>, which
+                    substantially narrows the performance gap between smaller open-weight models
+                    and frontier models on perception-limited tasks.
+                  </p>
+                </td>
+              </tr>
+
+              <!-- JEPA World Models -->
+              <tr onmouseout="jepa_stop()" onmouseover="jepa_start()">
+                <td style="padding:20px;width:25%;vertical-align:middle">
+                  <div class="one">
+                    <div class="two" id="jepa_image">
+                      <img src="images/jepa-results.jpg" width="160" height="160" style="object-fit:cover;">
+                    </div>
+                    <img src="images/jepa.jpg" width="160" height="160" style="object-fit:cover;">
+                  </div>
+                  <script type="text/javascript">
+                    function jepa_start() { document.getElementById('jepa_image').style.opacity = "1"; }
+                    function jepa_stop()  { document.getElementById('jepa_image').style.opacity = "0"; }
+                    jepa_stop();
+                  </script>
+                </td>
+                <td style="padding:20px;width:75%;vertical-align:middle">
+                  <span class="papertitle">Reward-Aware World Models Using Joint-Embedding Predictive Architectures (JEPA)</span>
+                  <br>
+                  <strong>Aditya Marada</strong>
+                  <br>
+                  <em>Research Project, University of Amsterdam</em> &nbsp;&mdash;&nbsp; Jun. 2026
+                  <br><a href="papers/jepa-world-models.pdf" target="_blank">report</a>
+                  <p>
+                    Investigated whether JEPA latent representations encode recoverable reward
+                    and value information for downstream RL. Compared against DreamerV3 and
+                    DINOv2 baselines across multiple Gymnasium environments, evaluating
+                    reward-prediction quality, latent planning, and representation transfer.
+                  </p>
+                </td>
+              </tr>
+
+              <!-- DBpedia Hindi IE — PUBLISHED -->
+              <tr onmouseout="dbpedia_stop()" onmouseover="dbpedia_start()">
+                <td style="padding:20px;width:25%;vertical-align:middle">
+                  <div class="one">
+                    <div class="two" id="dbpedia_image">
+                      <img src="images/dbpedia-results.jpg" width="160" height="160" style="object-fit:cover;">
+                    </div>
+                    <img src="images/dbpedia.jpg" width="160" height="160" style="object-fit:cover;">
+                  </div>
+                  <script type="text/javascript">
+                    function dbpedia_start() { document.getElementById('dbpedia_image').style.opacity = "1"; }
+                    function dbpedia_stop()  { document.getElementById('dbpedia_image').style.opacity = "0"; }
+                    dbpedia_stop();
+                  </script>
+                </td>
+                <td style="padding:20px;width:75%;vertical-align:middle">
+                  <span class="papertitle">LLM-Assisted Multilingual Information Extraction for Knowledge Graph Population: The DBpedia Hindi Chapter</span>
+                  <br>
+                  <strong>Aditya Marada</strong>
+                  <br>
+                  <em>ESWC 2026 Text2KG Workshop</em> &nbsp;&mdash;&nbsp; Sep. 2025
+                  <br><a href="papers/dbpedia-hindi-ie.pdf" target="_blank">paper</a>
+                  <p>
+                    Hybrid multilingual IE system combining rule-based NLP with small LMs,
+                    achieving <strong>66% recall</strong> on Hindi-BenchIE. Built a complete
+                    knowledge-graph population pipeline: entity linking, ontology alignment,
+                    and SPARQL endpoint deployment. Google Summer of Code 2025 project.
+                  </p>
+                </td>
+              </tr>
+
+              <!-- K-Means CUDA -->
+              <tr onmouseout="kmeans_stop()" onmouseover="kmeans_start()">
+                <td style="padding:20px;width:25%;vertical-align:middle">
+                  <div class="one">
+                    <div class="two" id="kmeans_image">
+                      <img src="images/kmeans-results.jpg" width="160" height="160" style="object-fit:cover;">
+                    </div>
+                    <img src="images/kmeans.jpg" width="160" height="160" style="object-fit:cover;">
+                  </div>
+                  <script type="text/javascript">
+                    function kmeans_start() { document.getElementById('kmeans_image').style.opacity = "1"; }
+                    function kmeans_stop()  { document.getElementById('kmeans_image').style.opacity = "0"; }
+                    kmeans_stop();
+                  </script>
+                </td>
+                <td style="padding:20px;width:75%;vertical-align:middle">
+                  <span class="papertitle">Parallel K-Means Clustering Using CUDA</span>
+                  <br>
+                  <strong>Aditya Marada</strong>
+                  <br>
+                  <em>Programming Large-Scale Parallel Systems, University of Amsterdam</em> &nbsp;&mdash;&nbsp; Jun. 2025
+                  <br><a href="papers/parallel-kmeans-cuda.pdf" target="_blank">report</a>
+                  <p>
+                    GPU-accelerated K-Means in C++/CUDA achieving a <strong>47.6&times; speedup</strong>
+                    over the sequential CPU baseline. Scalability experiments on the DAS-5
+                    supercomputer across varying dataset sizes, dimensionalities, and cluster counts.
+                  </p>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+
+          <!-- ================================================================
+               PUBLICATIONS
+               ================================================================ -->
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
+              <tr>
+                <td style="padding:20px;width:100%;vertical-align:middle">
+                  <h2>Publications</h2>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
+              <tr>
+                <td style="padding:20px;width:100%;vertical-align:middle">
+                  <p>
+                    <strong>LLM-Assisted Multilingual Information Extraction for Knowledge Graph Population: The DBpedia Hindi Chapter</strong><br>
+                    <strong>Aditya Marada</strong><br>
+                    <em>ESWC 2026 Text2KG Workshop</em>, 2026<br>
+                    <a href="papers/dbpedia-hindi-ie.pdf" target="_blank">paper</a>
+                  </p>
+                  <p>
+                    <strong>A Framework to Capture the Shift in Dynamics of a Multi-phase Protest</strong><br>
+                    <strong>Aditya Marada</strong> et al.<br>
+                    <em>Springer Communications in Computer and Information Science (CCIS)</em>, 2021<br>
+                    <a href="https://www.researchgate.net/publication/351338940_A_Framework_to_Capture_the_Shift_in_Dynamics_of_a_Multi-phase_Protest-A_Case_Study_of_Hong_Kong_Protests">paper</a>
+                  </p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- ================================================================
+               PROJECTS
+               ================================================================ -->
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
+              <tr>
+                <td style="padding:20px;width:100%;vertical-align:middle">
+                  <h2>Projects</h2>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
+
+              <tr>
+                <td style="padding:20px;width:100%;vertical-align:middle">
+                  <p>
+                    <a href="https://github.com/advenk/opendc/tree/cost-sch-final"><span class="papertitle">Cost-Aware Scheduling in OpenDC</span></a> (2024)<br>
+                    Integrated cost awareness into the OpenDC datacenter simulation framework,
+                    adding cost-based scheduling strategies for resource allocation decisions.
+                    <em>Kotlin, Java.</em>
+                  </p>
+                  <p>
+                    <a href="https://github.com/advenk/URLShortener"><span class="papertitle">URL Shortener</span></a> (2025)<br>
+                    URL shortener with JWT authentication, full CRUD, deployed on Kubernetes
+                    using VMs provided by the eScience Center.
+                    <em>Python, Flask, Docker, Kubernetes.</em>
+                  </p>
+                  <p>
+                    <a href="https://github.com/advenk/hp-social-network"><span class="papertitle">Social Network Graph from Text</span></a> (2020)<br>
+                    Built and analysed a co-occurrence social graph from <em>Harry Potter and the Philosopher's Stone</em>,
+                    correlating graph structure with narrative events.
+                    <em>Python, Gephi, NLP.</em>
+                  </p>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+
+          <!-- ================================================================
+               FOOTER
+               ================================================================ -->
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
+              <tr>
+                <td style="padding:0px">
+                  <br>
+                  <p style="text-align:right;font-size:small;">
+                    Template from <a href="https://jonbarron.info">Jon Barron</a>.
+                  </p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
