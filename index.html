@@ -51,7 +51,7 @@
                 <td style="padding:2.5%;width:37%;max-width:37%">
                   <!-- Replace images/profile.jpg with your actual photo -->
                   <a href="images/profile.jpg">
-                    <img style="width:100%;max-width:100%;object-fit:cover;border-radius:50%;" alt="profile photo" src="images/profile.jpg">
+                    <img style="width:100%;max-width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:50%;" alt="profile photo" src="images/profile.jpg">
                   </a>
                 </td>
               </tr>
@@ -100,7 +100,7 @@
                   <br>
                   <strong>Aditya Marada</strong>
                   <br>
-                  <em>Master's Thesis, University of Amsterdam &amp; Qogita</em> &nbsp;&mdash;&nbsp; Expected Jul. 2026
+                  <em>Master's Thesis, University of Amsterdam &amp; Qogita</em> &nbsp;&mdash;&nbsp; Jul. 2026
                   <br><a href="papers/smart-rankings.pdf" target="_blank">report</a>
                   <p>
                     End-to-end LambdaMART pipeline over 52M+ product impressions, 163k buyers,
@@ -167,9 +167,11 @@
                   <br><a href="papers/jepa-world-models.pdf" target="_blank">report</a>
                   <p>
                     Investigated whether JEPA latent representations encode recoverable reward
-                    and value information for downstream RL. Compared against DreamerV3 and
-                    DINOv2 baselines across multiple Gymnasium environments, evaluating
-                    reward-prediction quality, latent planning, and representation transfer.
+                    and value information for downstream RL. Key finding: reward supervision is
+                    <strong>broadly compatible with the JEPA objective</strong> — jointly
+                    optimising reward/value, latent-prediction, and SIGReg losses stabilises
+                    fine-tuning across all 8 environments without representation collapse.
+                    Compared against DreamerV3 and DINOv2 baselines.
                   </p>
                 </td>
               </tr>
