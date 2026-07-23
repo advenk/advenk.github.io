@@ -2,78 +2,22 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [v2]
+    branches: [main]
 
 permissions:
   contents: write
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
-    env:
-      NODE_ENV: production
-
     steps:
       - uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-
-      - name: Install dependencies
-        run: |
-          npm install --verbose
-          npm install --include=dev
-      - name: List installed packages
-        run: npm list --depth=0
-
-      - name: List node_modules contents
-        run: ls -la node_modules
-
-      - name: Find Tailwind CSS
-        run: find . -name tailwindcss
-      - name: Debug packages
-        run: |
-          echo "Listing installed packages:"
-          npm list || true
-          echo "\nChecking node_modules directory:"
-          ls -la node_modules/
-          echo "\nChecking for specific packages:"
-          ls -la node_modules/tailwindcss || echo "tailwindcss not found"
-          ls -la node_modules/postcss || echo "postcss not found"
-          ls -la node_modules/autoprefixer || echo "autoprefixer not found"
-
-      - name: Build and Export
-        run: NODE_ENV=production npm run build
-
-      - name: List out directory contents
-        run: ls -la out
-
-      - name: Verify build output
-        run: |
-          if [ ! -d "out" ]; then
-            echo "Build failed: 'out' directory is missing"
-            exit 1
-          fi
-          if [ ! -f "out/index.html" ]; then
-            echo "Build failed: 'out/index.html' is missing"
-            exit 1
-          fi
-
-      - name: Add .nojekyll file
-        run: touch out/.nojekyll
-
-      - name: Prepare for deployment
-        run: |
-          rm -rf gh-pages
-          mkdir gh-pages
-          cp -r out/* gh-pages/
-          touch gh-pages/.nojekyll
-
-      - name: Deploy to GitHub Pages
+      - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          folder: gh-pages
+          folder: .
           clean: true
+          clean-exclude: |
+            .nojekyll
